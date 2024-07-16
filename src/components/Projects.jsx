@@ -14,7 +14,7 @@ const Projects = ({ onMinimize, onMaximize, onClose }) => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/projects');
+        const response = await fetch(import.meta.env.VITE_PROJECT_API);
         if (!response.ok) {
           throw new Error('Failed to fetch projects');
         }
@@ -61,6 +61,7 @@ const Projects = ({ onMinimize, onMaximize, onClose }) => {
           </div>
           <div className=" h-[90%] p-5 sm:p-10 overflow-y-auto ">
             <div className={``}>
+              {console.log(projects+import.meta.env.VITE_PROJECT_API)}
             <h1 className='text-2xl sm:text-4xl'>Main Projects :</h1>
               <div className={`grid ${isMaximized ? 'sm:grid-cols-3' : 'sm:grid-cols-2'} gap-4 p-4  `}>
               {projects.map((project) => (project.type==="main" && 
