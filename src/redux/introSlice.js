@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 export const fetchIntro = createAsyncThunk('fetchIntro', async () => {
   const response = await fetch(`${import.meta.env.VITE_INTRO_API}`);
   const data = await response.json();
-  console.log(data);
+  // console.log(data);
   return data;
 });
 

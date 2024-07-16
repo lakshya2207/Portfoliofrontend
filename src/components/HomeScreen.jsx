@@ -71,13 +71,7 @@ const HomeScreen = () => {
         return () => clearInterval(interval);
     }, []);
 
-    const onMinimize = () => {
-        var FileExp = document.getElementById('aboutme');
-        console.log(FileExp)
-        FileExp.style.height = 0;
-        FileExp.style.width = 0;
-
-    }
+    
     return (
         <div className="absolute h-screen w-full bg-[url('/wallpaper.jpg')] bg-cover bg-center">
             {/* Desktop Icons */}
