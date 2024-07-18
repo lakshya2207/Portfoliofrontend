@@ -73,7 +73,7 @@ const HomeScreen = () => {
 
     
     return (
-        <div className="absolute h-screen w-full bg-[url('/wallpaper.jpg')] bg-cover bg-center">
+        <div className="absolute h-[calc(100dvh)] w-full bg-[url('/wallpaper.jpg')] bg-cover bg-center">
             {/* Desktop Icons */}
             <div className="absolute top-0 left-0 p-2 grid grid-cols-1 gap-4">
                 <button onClick={() => { openWindow('FileExplorer') }} className="flex flex-col items-center">
