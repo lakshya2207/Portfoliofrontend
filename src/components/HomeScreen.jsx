@@ -2,19 +2,18 @@ import React, { useState, useEffect } from 'react';
 import FileExplorer from './FileExplorer';
 import Contactme from './Contactme';
 import Projects from './Projects';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-const notify = () => toast("Maximize the window for better view !", {
-    position: "bottom-right",
-    autoClose: 2000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "light",
-    transition: Bounce,
-    });;
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
+// const notify = () => toast.info("Maximize the window for better view !", {
+//     position: "bottom-right",
+//     autoClose: 2000,
+//     hideProgressBar: false,
+//     closeOnClick: true,
+//     pauseOnHover: true,
+//     draggable: true,
+//     progress: undefined,
+//     theme: "light"
+// });;
 
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchIntro } from '../redux/introSlice';
@@ -88,7 +87,10 @@ const HomeScreen = () => {
         <div className="absolute h-[calc(100dvh)] w-full bg-[url('/wallpaper.jpg')] bg-cover bg-center">
             {/* Desktop Icons */}
             <div className="absolute top-0 left-0 p-2 grid grid-cols-1 gap-4">
-                <button onClick={() => { openWindow('FileExplorer', notify) }} className="flex flex-col items-center">
+                <button onClick={()=>{
+                    openWindow('FileExplorer');
+                    notify();
+                }} className="flex flex-col items-center">
                     <img src={icons[0].image} alt={icons[0].name} className="h-8 w-8 z-1" />
                     {/* {intro.github} */}
                     <div className="text-white">{icons[0].name}</div>
@@ -114,6 +116,7 @@ const HomeScreen = () => {
                     <div className="text-white">Resume</div>
                 </button>
 
+                {/* <button onClick={notify}>notify</button> */}
                 {openWindows.FileExplorer && (
                     <FileExplorer
                         intro={intro}
@@ -138,10 +141,7 @@ const HomeScreen = () => {
                     />
                 )}
 
-            </div>
-
-            <ToastContainer
-                position="bottom-right"
+            {/* <ToastContainer position="bottom-right"
                 autoClose={2000}
                 hideProgressBar={false}
                 newestOnTop={false}
@@ -150,9 +150,9 @@ const HomeScreen = () => {
                 pauseOnFocusLoss
                 draggable
                 pauseOnHover
-                theme="light"
-                transition:Bounce
-            />
+                theme="light" /> */}
+            </div>
+
             {/* Taskbar */}
             <div className="absolute bottom-0 left-0 w-full bg-gray-800  flex justify-between items-center">
                 <div className='flex'>
