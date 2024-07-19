@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const ContactMe = ({ onMinimize, onMaximize, onClose }) => {
   const [isMaximized, setIsMaximized] = React.useState(false);
   const handleMaximize = () => {
@@ -11,7 +12,7 @@ const ContactMe = ({ onMinimize, onMaximize, onClose }) => {
     <div className={`border border-gray-700 text-white rounded-md shadow-lg bg-[#252525] absolute ${isMaximized ? 'w-[100vw] h-[93.5vh]' : 'sm:w-[50vw] h-[50vh]'}`}>
       <div className="relative headingbar flex justify-between items-center bg-black text-white">
         <div className='w-1/4 flex justify-between'>
-          <img src="./images/file.png" className='h-5' alt="icon" />
+          <img src="./images/.png" className='h-5' alt="icon" />
           <p className='whitespace-nowrap'>Contact Me</p >
         </div>
         <div className="flex space-x-2 content-center text-center">
