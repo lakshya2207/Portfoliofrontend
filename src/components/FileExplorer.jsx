@@ -23,7 +23,7 @@ const FileExplorer = ({ intro, onMinimize, onMaximize, onClose }) => {
         <div className='w-1/4 justify-between flex
          '>
           <img src="./images/file.png" className='h-5' alt="icon" />
-          <div >About Me</div>
+          <div className='whitespace-nowrap' >About Me</div>
         </div>
         <div className="flex space-x-2 content-center text-center">
           <button onClick={onMinimize} className="minimize-btn text-3xl px-2 hover:bg-slate-900">-</button>

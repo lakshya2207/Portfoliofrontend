@@ -5,16 +5,21 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Maintenance from './components/Maintainance';
 
 const router = createBrowserRouter([
+  // {
+  //   path: "/",
+  //   element: <LockScreen />,
+  // },
+  // {
+  //   path: "/home",
+  //   element: <HomeScreen />,
+  // },
   {
-    path: "/",
-    element: <LockScreen />,
-  },
-  {
-    path: "/home",
-    element: <HomeScreen />,
-  },
+      path: "/",
+      element: <Maintenance />,
+    }
 ]);
 
 const App = () => {

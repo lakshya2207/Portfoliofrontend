@@ -89,7 +89,7 @@ const HomeScreen = () => {
             <div className="absolute top-0 left-0 p-2 grid grid-cols-1 gap-4">
                 <button onClick={()=>{
                     openWindow('FileExplorer');
-                    notify();
+                    
                 }} className="flex flex-col items-center">
                     <img src={icons[0].image} alt={icons[0].name} className="h-8 w-8 z-1" />
                     {/* {intro.github} */}
