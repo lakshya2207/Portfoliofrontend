@@ -29,7 +29,7 @@ const Projects = ({ onMinimize, onMaximize, onClose }) => {
   }, []);
 
   return (
-    <div className={`border border-gray-700 text-white rounded-md shadow-lg bg-[#252525] absolute ${isMaximized ? 'w-[100vw] h-[93.5vh]' : 'sm:w-[50vw] h-[50vh]'}`}>
+    <div className={`border border-gray-700 text-white rounded-md shadow-lg bg-[#252525] absolute ${isMaximized ? 'w-[calc(100dvw)] h-[calc(93.5dvh)]' : 'sm:w-[50vw] h-[50vh]'}`}>
       {/* heading bar */}
       <div className="relative headingbar flex justify-between items-center bg-black text-white ">
         <div className='w-1/4 justify-between flex
@@ -68,7 +68,7 @@ const Projects = ({ onMinimize, onMaximize, onClose }) => {
                 <>
                 <div key={project._id} className="bg-[#121212] rounded-lg shadow-md overflow-hidden">
                   <div className="flex justify-center items-center overflow-hidden">
-                    <div className="flex justify-center items-center w-full h-full">
+                    <div className="flex justify-center items-center w-full ">
                       <img src={`${project.images[0]}`} alt={project.name} className="${isMaximized ? '' : ''}" />
                     </div>
                   </div>

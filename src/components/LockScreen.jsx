@@ -32,9 +32,9 @@ const LockScreen = () => {
 
   return (
     <>
-      <div className='lockscreen absolute bg-[url("https://mrwallpaper.com/images/hd/4k-ultra-hd-windows-forest-artwork-3vcnu451trkacmcd.jpg")] bg-cover bg-center flex blur-[2px] justify-items-center items-center h-[calc(100dvh)] w-screen'>
+      <div className='lockscreen absolute bg-[url("https://mrwallpaper.com/images/hd/4k-ultra-hd-windows-forest-artwork-3vcnu451trkacmcd.jpg")] bg-cover bg-center flex blur-[2px] justify-items-center items-center h-[calc(100dvh)] w-[calc(100dvw)]'>
       </div>
-      <div className='h-[calc(100dvh)] absolute w-screen content-center text-center'>
+      <div className='h-[calc(100dvh)] absolute w-[calc(100dvw)] content-center text-center'>
 
         <div className="login relative m-auto  w-[350px]  h-1/2">
           <img className='m-auto h-40 w-40 rounded-full' src={image} alt="dp" />
