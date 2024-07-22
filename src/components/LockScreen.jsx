@@ -22,6 +22,7 @@ const LockScreen = () => {
       if (response.ok) {
         // Redirect to the next page
         window.location.href = '/home';
+        console.log("sent")
       } else {
         setError('Failed to submit name');
       }
@@ -46,7 +47,7 @@ const LockScreen = () => {
           <form onSubmit={handleSubmit}>
           {error && <p className="text-red-500 mb-4">{error}</p>}
           <input
-            type="text" placeholder='Enter your name to continue'
+            type="text" placeholder='Enter your name to continue' name='name'
             className="w-full mt-3 p-1.5 bg-white bg-opacity-20  placeholder-opacity-100 placeholder-white text-white border-2 border-[rgba(255,255,255,0.6)] focus:outline-none" value={name}
                     onChange={(e) => setName(e.target.value)}
           />
