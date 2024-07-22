@@ -29,7 +29,7 @@ const Projects = ({ onMinimize, onMaximize, onClose }) => {
   }, []);
 
   return (
-    <div className={`border border-gray-700 text-white rounded-md shadow-lg bg-[#252525] absolute ${isMaximized ? 'w-[calc(100dvw)] h-[calc(93.5dvh)]' : 'sm:w-[50vw] h-[50vh]'}`}>
+    <div className={`border border-gray-700 text-white rounded-md shadow-lg bg-[#252525] fixed ${isMaximized ? 'w-[calc(100dvw)] h-full' : 'h-4/6 sm:w-[50vw] h-[50vh]'}`}>
       {/* heading bar */}
       <div className="relative headingbar flex justify-between items-center bg-black text-white ">
         <div className='w-1/4 justify-between flex

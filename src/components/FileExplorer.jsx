@@ -18,7 +18,7 @@ const FileExplorer = ({ intro, onMinimize, onMaximize, onClose }) => {
   const parsedSkills = intro && intro.skills ? JSON.parse(intro.skills.replace(/\\"/g, '"').replace(/^"|"$/g, '')) : {};
 
   return (
-    <div className={`border border-gray-700 text-white rounded-md shadow-lg bg-[#252525] absolute ${isMaximized ? 'w-[100vw] h-[93.5vh]' : ' sm:w-[50vw] h-[50vh]'}`}>
+    <div className={`border border-gray-700 text-white rounded-md shadow-lg bg-[#252525] fixed ${isMaximized ? 'w-[100vw] h-full' : 'h-4/6 sm:w-[50vw] h-[50vh]'}`}>
       <div className="relative headingbar flex justify-between items-center bg-black text-white ">
         <div className='w-1/4 justify-between flex
          '>
@@ -40,7 +40,7 @@ const FileExplorer = ({ intro, onMinimize, onMaximize, onClose }) => {
             <p className='truncate'>{path}</p>
           </div>
 
-          <div className="h-[95%] sm:h-[90%] p-10 overflow-y-auto ">
+          <div className="h-[96%] sm:h-[90%] p-10 overflow-y-auto ">
             <div className=" flex justify-between  ">
               <div className=' content-center'>
                 <h2 className="text-4xl font-mono">{intro.name}</h2>

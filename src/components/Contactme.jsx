@@ -9,7 +9,7 @@ const ContactMe = ({ onMinimize, onMaximize, onClose }) => {
   };
 
   return (
-    <div className={`border border-gray-700 text-white rounded-md shadow-lg bg-[#252525] absolute ${isMaximized ? 'w-[100vw] h-[93.5vh]' : 'sm:w-[50vw] h-[50vh]'}`}>
+    <div className={`border border-gray-700 text-white rounded-md shadow-lg bg-[#252525] fixed ${isMaximized ? 'w-[100vw] h-full' : 'sm:w-[50vw] h-[50vh]'}`}>
       <div className="relative headingbar flex justify-between items-center bg-black text-white">
         <div className='w-1/4 flex justify-between'>
           <img src="./images/contact.png" className='h-5' alt="icon" />
